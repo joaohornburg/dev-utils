@@ -1,0 +1,4 @@
+Useful tools so far:
+
+same: shows similarities between two text files.
+sysos.rb: lists all files in a directory which contain the string "System.out.println"
