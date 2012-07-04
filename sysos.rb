@@ -1,11 +1,3 @@
-#!/usr/bin/ruby
+#!/bin/bash
 
-srcFiles = File.join(ARGV.first, "**", "*.java")
-Dir.glob(srcFiles).each do |file_name|
-  text = File.read file_name 
-  file = File.open file_name, "r+" 
-  if text.match(/System[.]out[.]println/) 
-    puts file_name
-  end
-  file.close
-end
+find $1 -name *.java | xargs grep 'System\.out\.println' '{}'
